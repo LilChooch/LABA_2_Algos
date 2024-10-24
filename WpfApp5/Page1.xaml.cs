@@ -27,10 +27,6 @@ namespace WpfApp5
             InitializeComponent();
         }
 
-
-
-       
-
         private void MyFrame1_Navigated(object sender, NavigationEventArgs e)
         {
 
@@ -46,15 +42,7 @@ namespace WpfApp5
             MyFrame1.Navigate(new Uri("Page3.xaml", UriKind.Relative));
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
     }
 
 
