@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\wpfapp5\\page3.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|d:\\\u0432\u0441\u0435\\project_proga2\\wpfapp5\\wpfapp5\\page3.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\page3.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\wpfapp5\\page3.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\page3.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|d:\\\u0432\u0441\u0435\\project_proga2\\wpfapp5\\wpfapp5\\page1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\page1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\wpfapp5\\page1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\page1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\wpfapp5\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
@@ -25,6 +17,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\wpfapp5\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\wpfapp5\\page1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\page1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\wpfapp5\\page1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\page1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAC326AC-F8EC-4A88-AF29-90CB1E78609B}|WpfApp5\\WpfApp5.csproj|D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\wpfapp5\\page2.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "WpfApp5\\Page3.xaml.cs",
               "ToolTip": "D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\WpfApp5\\Page3.xaml.cs",
               "RelativeToolTip": "WpfApp5\\Page3.xaml.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAIwCkAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAIwCkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T09:17:56.468Z",
               "EditorCaption": ""
@@ -67,8 +67,8 @@
               "Title": "Page3.xaml",
               "DocumentMoniker": "D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\WpfApp5\\Page3.xaml",
               "RelativeDocumentMoniker": "WpfApp5\\Page3.xaml",
-              "ToolTip": "D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\WpfApp5\\Page3.xaml",
-              "RelativeToolTip": "WpfApp5\\Page3.xaml",
+              "ToolTip": "D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\WpfApp5\\Page3.xaml*",
+              "RelativeToolTip": "WpfApp5\\Page3.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-23T09:16:18.976Z",
               "EditorCaption": ""
@@ -82,7 +82,8 @@
               "ToolTip": "D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\WpfApp5\\Page2.xaml",
               "RelativeToolTip": "WpfApp5\\Page2.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-27T19:41:24.979Z"
+              "WhenOpened": "2024-05-27T19:41:24.979Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -94,11 +95,12 @@
               "RelativeToolTip": "WpfApp5\\Page2.xaml.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T19:42:34.797Z"
+              "WhenOpened": "2024-05-27T19:42:34.797Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Page1.xaml",
               "DocumentMoniker": "D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\WpfApp5\\Page1.xaml",
               "RelativeDocumentMoniker": "WpfApp5\\Page1.xaml",
@@ -110,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Page1.xaml.cs",
               "DocumentMoniker": "D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\WpfApp5\\Page1.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp5\\Page1.xaml.cs",
@@ -118,22 +120,24 @@
               "RelativeToolTip": "WpfApp5\\Page1.xaml.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T17:35:57.378Z"
+              "WhenOpened": "2024-04-24T17:35:57.378Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\WpfApp5\\MainWindow.xaml",
               "RelativeDocumentMoniker": "WpfApp5\\MainWindow.xaml",
               "ToolTip": "D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\WpfApp5\\MainWindow.xaml",
               "RelativeToolTip": "WpfApp5\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-24T12:18:34.385Z"
+              "WhenOpened": "2024-04-24T12:18:34.385Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\\u0412\u0441\u0435\\Project_Proga2\\WpfApp5\\WpfApp5\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp5\\MainWindow.xaml.cs",
@@ -141,7 +145,8 @@
               "RelativeToolTip": "WpfApp5\\MainWindow.xaml.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T18:52:41.446Z"
+              "WhenOpened": "2024-05-16T18:52:41.446Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
