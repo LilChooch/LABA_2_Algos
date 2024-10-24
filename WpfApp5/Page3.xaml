@@ -43,19 +43,18 @@
         <TextBox x:Name="CountStep" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="1" Margin="138,5,0,0" FontSize="20" TextWrapping="Wrap"  VerticalAlignment="Top" Width="Auto" Height="35"/>
 
 
-        <TextBlock Grid.Row="6" Grid.Column="3" Text="Скорость: " 
-            Margin="0 8 0 0"  VerticalAlignment="top" HorizontalAlignment="Center" FontSize="20" MaxHeight="60" MinHeight="40" MaxWidth="400" MinWidth="200">
-        </TextBlock>
-        <Slider x:Name="basis" Grid.Row="6" Grid.Column="3" MaxHeight="40"  MinHeight="20" TickFrequency="1" HorizontalAlignment="Stretch" Margin="5 0 7 0" MaxWidth="200" MinWidth="100" VerticalAlignment="Center"/>
-        <TextBox x:Name="baseText1" HorizontalAlignment="Left" Grid.Row="6" Grid.Column="3" Margin="138,5,0,0" FontSize="20" TextWrapping="Wrap" Text="{Binding ElementName=basis, Path=Value, StringFormat='F0'}" VerticalAlignment="Top" Width="Auto" Height="35"/>
+        <TextBlock Text="{Binding ElementName=Sped, Path=Value, StringFormat='Скорость: {0:F0}'}" Grid.Column="6" Grid.Row="6"
+     Margin="0 20 0 0"  VerticalAlignment="top" HorizontalAlignment="Center" FontSize="20" MaxHeight="60" MinHeight="40" MaxWidth="400" MinWidth="200"/>
+        <Slider x:Name="Sped" Grid.Row="6" Grid.Column="6"  Maximum="10" Minimum="0" TickFrequency="1"   MaxHeight="40"  MinHeight="20" HorizontalAlignment="Stretch" Margin="5 30 7 0" MaxWidth="200" MinWidth="150" VerticalAlignment="Center"/>
+        
 
         <TextBlock Text="{Binding ElementName=CountRage, Path=Value, StringFormat='Количеcтво колец: {0:F0}'}" Grid.Column="0" Grid.Row="0"
             Margin="0 32 0 0"  VerticalAlignment="top" HorizontalAlignment="Center" FontSize="20" MaxHeight="60" MinHeight="40" MaxWidth="400" MinWidth="200"/>
         <Slider x:Name="CountRage" Grid.Row="0"  Maximum="8" Minimum="3" TickFrequency="1"   MaxHeight="40"  MinHeight="20" HorizontalAlignment="Stretch" Margin="5 30 7 0" MaxWidth="200" MinWidth="150" VerticalAlignment="Center"/>
 
         <Button Content="Запуск" Grid.Column="2" MinWidth="180" MaxWidth="190" HorizontalAlignment="Right"/>
-       
-        <Border Background="BlueViolet" Grid.Column="4" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3"></Border>
+
+        <Border Background="BlueViolet" Grid.Column="5" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3"/>
 
         <TextBlock Text="Шаги" 
            Grid.Row="1" Grid.Column="4"  HorizontalAlignment="Center" VerticalAlignment="Top" MinHeight="35" MaxHeight="40"  FontSize="25" >
