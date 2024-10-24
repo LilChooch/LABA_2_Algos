@@ -98,7 +98,7 @@
         <ScrollViewer Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="4" Grid.RowSpan="4">
             <StackPanel>
 
-                <TextBox x:Name="Step" Grid.Row="2" Grid.Column="4"  />
+                <TextBox x:Name="Step" Margin="0 40 0 0 "  />
             </StackPanel>
         </ScrollViewer>
         <Frame x:Name="MyFrame3" Grid.ColumnSpan="6" Grid.RowSpan="6"/>
