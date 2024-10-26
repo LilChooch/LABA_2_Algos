@@ -27,78 +27,36 @@
         <Grid Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="6" Background="#B6D7DE" />
         <Grid Grid.ColumnSpan="2" Grid.Column="0" Grid.RowSpan="6"  Background="#B6D7DE"/>
 
-        <Button Click="Button_Click" Background="#B6D7DE" Grid.Column="3" VerticalAlignment="Top"  HorizontalAlignment="Right" Margin="10 5 22 10" MaxWidth="80" MinWidth="70" Height="45" >
+        <Button Click="Home_Click" Background="#B6D7DE" Grid.Column="3" VerticalAlignment="Top"  HorizontalAlignment="Right" Margin="10 5 22 10" MaxWidth="80" MinWidth="70" Height="45" >
             <materialDesign:PackIcon Kind="Home" Background="Gray" Height="25" Width="42" HorizontalAlignment="Center" VerticalAlignment="Center"></materialDesign:PackIcon>
         </Button>
-        <Canvas Name="gameCanvas"  Grid.Column="0" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3"  MinWidth="852" MaxWidth="952" MinHeight="400" MaxHeight="600" Background="LightGray" VerticalAlignment="Top" HorizontalAlignment="Left">
-     <!-- Башни -->
-         <Rectangle Name="tower1" Width="10" Height="150" Canvas.Left="150" Canvas.Top="100" Fill="Black"/>
-         <Rectangle Name="tower2" Width="10" Height="150" Canvas.Left="450" Canvas.Top="100" Fill="Black"/>
-        <Rectangle Name="tower3" Width="10" Height="150" Canvas.Left="750" Canvas.Top="100" Fill="Black"/>
-     
-        <Rectangle Name="tower4" Width="10" Height="150" Canvas.Left="153" Canvas.Bottom="100" Fill="Black" Canvas.Top="180" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Name="tower5" Width="10" Height="150" Canvas.Left="451" Canvas.Bottom="100" Fill="Black" Canvas.Top="180" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-     </Rectangle>
-        <Rectangle Name="tower6" Width="10" Height="150" Canvas.Left="751" Canvas.Bottom="100" Fill="Black" Canvas.Top="180" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                     <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                 </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-
+        <Canvas Name="gameCanvas"  Grid.Column="0" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3"  Width="852" Height="400" Background="LightGray" VerticalAlignment="Top" HorizontalAlignment="Left">
         </Canvas>
 
         <Button Grid.Column="0" Grid.Row="6" Content="Назад" MinWidth="180" MaxWidth="190" />
-        <Button Grid.Column="1" Grid.Row="6" Content="Стоп"  MinWidth="180" MaxWidth="190" />
+        <Button Grid.Column="1" Grid.Row="6" Content="Запуск" Click="Start_Click"  MinWidth="180" MaxWidth="190" />
         <Button Grid.Column="2 " Grid.Row="6" Content="Вперед"  MinWidth="180" MaxWidth="190"  />
 
-        <TextBlock  Text="Количсетво шагов:"
-             VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"    Grid.Row="0" Grid.Column="1">
-        </TextBlock>
-        <TextBox x:Name="CountStep" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="1" Margin="138,5,0,0" FontSize="20" TextWrapping="Wrap"  VerticalAlignment="Top" Width="Auto" Height="35"/>
 
-
-        <TextBlock Text="{Binding ElementName=Sped, Path=Value, StringFormat='Скорость: {0:F0}'}" Grid.Column="6" Grid.Row="6"
+        <TextBlock Text="{Binding ElementName=Speed, Path=Value, StringFormat='Скорость: {0:F0}'}" Grid.Column="6" Grid.Row="6"
      Margin="0 20 0 0"  VerticalAlignment="top" HorizontalAlignment="Center" FontSize="20" MaxHeight="60" MinHeight="40" MaxWidth="400" MinWidth="200"/>
-        <Slider x:Name="Sped" Grid.Row="6" Grid.Column="6"  Maximum="10" Minimum="0" TickFrequency="1"   MaxHeight="40"  MinHeight="20" HorizontalAlignment="Stretch" Margin="5 30 7 0" MaxWidth="200" MinWidth="150" VerticalAlignment="Center"/>
+        <Slider x:Name="Speed" Grid.Row="6" Grid.Column="6"  Maximum="10" Minimum="1" TickFrequency="1"   MaxHeight="40"  MinHeight="20" HorizontalAlignment="Stretch" Margin="5 30 7 0" MaxWidth="200" MinWidth="150" VerticalAlignment="Center"/>
         
 
-        <TextBlock Text="{Binding ElementName=CountRage, Path=Value, StringFormat='Количеcтво колец: {0:F0}'}" Grid.Column="0" Grid.Row="0"
+        <TextBlock Text="{Binding ElementName=CountRings, Path=Value, StringFormat='Количеcтво колец: {0:F0}'}" Grid.Column="0" Grid.Row="0"
             Margin="0 32 0 0"  VerticalAlignment="top" HorizontalAlignment="Center" FontSize="20" MaxHeight="60" MinHeight="40" MaxWidth="400" MinWidth="200"/>
-        <Slider x:Name="CountRage" Grid.Row="0"  Maximum="8" Minimum="3" TickFrequency="1"   MaxHeight="40"  MinHeight="20" HorizontalAlignment="Stretch" Margin="5 30 7 0" MaxWidth="200" MinWidth="150" VerticalAlignment="Center"/>
+        <Slider x:Name="CountRings" Grid.Row="0"  Maximum="50" Minimum="3" TickFrequency="1"   MaxHeight="40"  MinHeight="20" HorizontalAlignment="Stretch" Margin="5 30 7 0" MaxWidth="200" MinWidth="150" VerticalAlignment="Center"/>
 
-        <Button Content="Запуск" Grid.Column="2" MinWidth="180" MaxWidth="190" HorizontalAlignment="Right"/>
+        <Button Content="График" Grid.Column="2" MinWidth="180" MaxWidth="190" HorizontalAlignment="Right"/>
 
         <Border Background="BlueViolet" Grid.Column="5" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3"/>
 
         <TextBlock Text="Шаги" 
-           Grid.Row="1" Grid.Column="4"  HorizontalAlignment="Center" VerticalAlignment="Top" MinHeight="35" MaxHeight="40"  FontSize="25" >
+           Grid.Row="0" Grid.Column="4"  HorizontalAlignment="Center" VerticalAlignment="Bottom" MinHeight="35" MaxHeight="40"  FontSize="25" >
         </TextBlock>
         <ScrollViewer Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="4" Grid.RowSpan="4">
-            <StackPanel>
+            <StackPanel x:Name="StepLog">
 
-                <TextBox x:Name="Step" Margin="0 40 0 0 "  />
             </StackPanel>
         </ScrollViewer>
         <Frame x:Name="MyFrame3" Grid.ColumnSpan="6" Grid.RowSpan="6"/>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -28,33 +30,25 @@ namespace WpfApp5
         private int pegWidth = 10;
         private int pegHeight = 200;
         private int delay = 500; // Задержка между перемещениями в миллисекундах
+        private List<double> timeList = new List<double>(); 
 
         public Page3()
         {
             InitializeComponent();
-            numDiscs = 10;
-            pegs = new Stack<int>[3];
-            for (int i = 0; i < 3; i++)
-            {
-                pegs[i] = new Stack<int>();
-            }
-
-            for (int i = numDiscs; i > 0; i--)
-            {
-                pegs[0].Push(i);
-            }
-
             DrawPegs();
-            DrawDiscs();
+            Speed.ValueChanged += Speed_ValueChanged;
+        }
 
-            Task.Run(() => Move(numDiscs, 0, 2, 1));
+        private void Speed_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            delay = 1000 / (int)Math.Round(Speed.Value);
         }
 
         private void DrawPegs()
         {
             for (int i = 0; i < 3; i++)
             {
-                int x = 140 + i * cellWidth + (i + 1) * pegWidth;
+                int x = (int)gameCanvas.Width / 6 + i * cellWidth + (i + 1) * pegWidth; //140
                 Rectangle peg = new Rectangle
                 {
                     Width = pegWidth,
@@ -71,7 +65,7 @@ namespace WpfApp5
         {
             for (int i = 0; i < 3; i++)
             {
-                int x = 140 + i * cellWidth + (i + 1) * pegWidth;
+                int x = (int)gameCanvas.Width / 6 + i * cellWidth + (i + 1) * pegWidth; //140
                 int y = pegHeight + cellHeight * numDiscs;
                 foreach (int disc in pegs[i].Reverse())
                 {
@@ -91,6 +85,7 @@ namespace WpfApp5
             }
         }
 
+
         private async Task Move(int discs, int fromPeg, int toPeg, int otherPeg)
         {
             if (discs == 0)
@@ -109,6 +104,11 @@ namespace WpfApp5
                 DrawPegs();
                 DrawDiscs();
 
+                TextBox tb = new TextBox();
+                int i = StepLog.Children.Count + 1;
+                tb.TextAlignment = TextAlignment.Center; tb.FontSize = 25;
+                tb.Text = $"{i}) {fromPeg + 1} --> {toPeg + 1}";
+                StepLog.Children.Add(tb);
             });
 
             await Task.Delay(delay);
@@ -116,9 +116,36 @@ namespace WpfApp5
             await Move(discs - 1, otherPeg, toPeg, fromPeg);
         }
 
-    private void Button_Click(object sender, RoutedEventArgs e)
+    private void Home_Click(object sender, RoutedEventArgs e)
         {
             MyFrame3.Navigate(new Uri("Page1.xaml", UriKind.Relative));
+        }
+
+        //private void MyFrame3_Navigated(object sender, NavigationEventArgs e)
+        //{
+        //}
+
+
+        private void Start_Click(object sender, RoutedEventArgs e)
+        {
+            StepLog.Children.Clear();
+            numDiscs = (int)Math.Round(CountRings.Value);
+            cellHeight = pegHeight / numDiscs;
+            pegs = new Stack<int>[3];
+            for (int i = 0; i < 3; i++)
+            {
+                pegs[i] = new Stack<int>();
+            }
+
+            for (int i = numDiscs; i > 0; i--)
+            {
+                pegs[0].Push(i);
+            }
+
+            DrawPegs();
+            DrawDiscs();
+
+            Task.Run(() => Move(numDiscs, 0, 2, 1));
         }
     }
 }
