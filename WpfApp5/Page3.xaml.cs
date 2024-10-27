@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ScottPlot.Colormaps;
+using ScottPlot.WPF;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -29,9 +31,12 @@ namespace WpfApp5
         private int cellHeight = 20;
         private int pegWidth = 10;
         private int pegHeight = 200;
-        private int delay = 500; // Задержка между перемещениями в миллисекундах
-        private List<double> timeList = new List<double>(); 
+        private int delay = 1000; // Задержка между перемещениями в миллисекундах
+        private List<(int, double)> timeList = new List<(int, double)>();
 
+
+        public static event RefreshGraph TimeAdded;
+        public delegate void RefreshGraph(List<(int, double)> timeList);
         public Page3()
         {
             InitializeComponent();
@@ -42,6 +47,8 @@ namespace WpfApp5
         private void Speed_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             delay = 1000 / (int)Math.Round(Speed.Value);
+            //if (Speed.Value == Speed.Maximum)
+            //    delay = 0;
         }
 
         private void DrawPegs()
@@ -75,7 +82,9 @@ namespace WpfApp5
                     {
                         Width = discWidth,
                         Height = cellHeight,
-                        Fill = Brushes.Blue
+                        Fill = Brushes.Blue,
+                        Stroke = Brushes.Black
+
                     };
                     Canvas.SetLeft(discRect, discX);
                     Canvas.SetTop(discRect, y - cellHeight);
@@ -92,7 +101,7 @@ namespace WpfApp5
             {
                 return;
             }
-
+            Stopwatch sw = Stopwatch.StartNew();
             await Move(discs - 1, fromPeg, otherPeg, toPeg);
 
             int disc = pegs[fromPeg].Pop();
@@ -100,6 +109,7 @@ namespace WpfApp5
 
             await Dispatcher.InvokeAsync(() =>
             {
+                
                 gameCanvas.Children.Clear();
                 DrawPegs();
                 DrawDiscs();
@@ -114,6 +124,18 @@ namespace WpfApp5
             await Task.Delay(delay);
 
             await Move(discs - 1, otherPeg, toPeg, fromPeg);
+
+            await Dispatcher.InvokeAsync(() =>
+            {
+            sw.Stop();
+            if (!timeList.Select(t => t.Item1).Contains(discs))
+            {
+                double time = (sw.ElapsedTicks / 10000 / delay);
+                timeList.Add((discs, time));
+                TimeAdded?.Invoke(timeList);
+            }
+            });
+
         }
 
     private void Home_Click(object sender, RoutedEventArgs e)
@@ -128,6 +150,7 @@ namespace WpfApp5
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
+            timeList.Clear();
             StepLog.Children.Clear();
             numDiscs = (int)Math.Round(CountRings.Value);
             cellHeight = pegHeight / numDiscs;
@@ -146,6 +169,22 @@ namespace WpfApp5
             DrawDiscs();
 
             Task.Run(() => Move(numDiscs, 0, 2, 1));
+        }
+
+        private void Graph_Click(object sender, RoutedEventArgs e)
+        {
+            var opened = Application.Current.Windows.OfType<GraphWindow>().FirstOrDefault();
+            if (opened is null)
+            {
+                GraphWindow graphWindow = new GraphWindow();
+                graphWindow.DrawGraph(timeList);
+                graphWindow.Show();
+            }
+            else
+            {
+                opened.DrawGraph(timeList);
+                opened.Focus();
+            }
         }
     }
 }

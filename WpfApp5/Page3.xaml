@@ -47,7 +47,7 @@
             Margin="0 32 0 0"  VerticalAlignment="top" HorizontalAlignment="Center" FontSize="20" MaxHeight="60" MinHeight="40" MaxWidth="400" MinWidth="200"/>
         <Slider x:Name="CountRings" Grid.Row="0"  Maximum="50" Minimum="3" TickFrequency="1"   MaxHeight="40"  MinHeight="20" HorizontalAlignment="Stretch" Margin="5 30 7 0" MaxWidth="200" MinWidth="150" VerticalAlignment="Center"/>
 
-        <Button Content="График" Grid.Column="2" MinWidth="180" MaxWidth="190" HorizontalAlignment="Right"/>
+        <Button Content="График" Click="Graph_Click" Grid.Column="2" MinWidth="180" MaxWidth="190" HorizontalAlignment="Right"/>
 
         <Border Background="BlueViolet" Grid.Column="5" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3"/>
 
