@@ -33,9 +33,9 @@
         <Canvas Name="gameCanvas"  Grid.Column="0" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3"  Width="852" Height="400" Background="LightGray" VerticalAlignment="Top" HorizontalAlignment="Left">
         </Canvas>
 
-        <Button Grid.Column="0" Grid.Row="6" Content="Назад" MinWidth="180" MaxWidth="190" />
+        <!--<Button Grid.Column="0" Grid.Row="6" Content="Назад" MinWidth="180" MaxWidth="190" />-->
         <Button Grid.Column="1" Grid.Row="6" Content="Запуск" Click="Start_Click"  MinWidth="180" MaxWidth="190" />
-        <Button Grid.Column="2 " Grid.Row="6" Content="Вперед"  MinWidth="180" MaxWidth="190"  />
+        <!--<Button Grid.Column="2 " Grid.Row="6" Content="Вперед"  MinWidth="180" MaxWidth="190"  />-->
 
 
         <TextBlock Text="{Binding ElementName=Speed, Path=Value, StringFormat='Скорость: {0:F0}'}" Grid.Column="6" Grid.Row="6"
