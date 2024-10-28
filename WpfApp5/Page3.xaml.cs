@@ -83,7 +83,6 @@ namespace WpfApp5
                         Width = discWidth,
                         Height = cellHeight,
                         Fill = Brushes.LightBlue,
-                        StrokeThickness = 2,
                         Stroke = Brushes.Black
 
                     };
