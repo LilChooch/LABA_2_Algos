@@ -8,6 +8,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image.bmp")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dylib")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dylib")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dylib")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.so")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.so")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.so")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.so")]
 
 
